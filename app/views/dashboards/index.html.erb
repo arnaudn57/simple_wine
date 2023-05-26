@@ -1,0 +1,20 @@
+<div class="container">
+  <h2 class="text-center">Création formulaire/company</h2>
+
+  <%= simple_form_for @company do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+
+<%= link_to 'Ajouter un produit', new_product_path %>
+
+<div class="container">
+  <h2 class="text-center">Liste des produits</h2>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= product.name %></li>
+    <% end %>
+  </ul>
+</div>

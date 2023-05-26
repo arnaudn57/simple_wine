@@ -1,0 +1,9 @@
+<div class="container">
+  <h2 class="text-center">Ajout d'un produit</h2>
+  <%= simple_form_for @product do |f| %>
+    <%= f.input :name %>
+    <%= f.input :price %>
+    <%= f.input :volume %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

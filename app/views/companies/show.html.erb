@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Page du vigneron</h2>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= product.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+  <%= simple_form_for [@company, @order], url: create_order_company_path(@company) do |f| %>
+    <% @products.each do |product| %>
+    <div class="container">
+      <%= f.input :quantity, label: product.name %>
+
+    </div>
+    <% end %>
+    <%= f.button :submit %>
+  <% end %>
